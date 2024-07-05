@@ -1,4 +1,4 @@
-char optchar;
+int optchar;
 int options[10];
 int ctr;
 extern void print_line();
