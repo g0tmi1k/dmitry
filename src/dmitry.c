@@ -63,7 +63,7 @@ int main(int argc, char **argv)
 			case 't':
 				if (!isdigit(optarg[0])){
 					printf("Error: TTL invalid, acceptable range 0-9\n");
-					printf("Exampe: %s -p -t 9 host\n", argv[0]);
+					printf("Example: %s -p -t 9 host\n", argv[0]);
 					exit(0);
 				}
 				else ttl = optarg[0] - 48;
@@ -124,7 +124,7 @@ int main(int argc, char **argv)
 		options[5] = 1;
 	}
 
-	/* Potscan options */
+	/* Portscan options */
 
 	if ( options[3] == 100 || options[3] == 10 || options[3] == 110 ){
 		printf("Error: No '-p' flag passed with TTL, assuming -p\n");
@@ -155,8 +155,8 @@ int main(int argc, char **argv)
 			host_ip[MAXIPLEN - 1] = '\0';
 			break;
 	}
-	print_line("HostIP:%s\n", host_ip);
-	print_line("HostName:%s\n", host_name);
+	print_line("Host IP:%s\n", host_ip);
+	print_line("Host Name:%s\n", host_name);
 	if ( strlen(outputfile) ) file_close();
 	/* Scanning Functions */
 
